@@ -184,8 +184,8 @@ public void comenzar_a_jugar_auto(){
             String introduceX;
             boolean fin=false;
            
-            System.out.println("¿Cómo quieres jugar X/0?");
-            String juego = teclado.readLine().toUpperCase();
+            System.out.println("Vas a Jugar con la x");
+            String juego = "X";
             int valor_juego=0;
             if(juego.equals("0")){
                 valor_juego=0;
