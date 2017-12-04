@@ -11,7 +11,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 /**
  *
- * @author Mario
+ * @author Mario y Axel
  */
 public class Tictactoe {
     int tablero[][]= new int [3][3];
@@ -35,6 +35,9 @@ public class Tictactoe {
                 
                 switch(opcion){
                     case '1':
+                        mi_juego.inicializa();
+                    mi_juego.dibuja_tres_en_raya();
+                    mi_juego.comenzar_a_jugar();
                         break;
                      
                     case '2':
