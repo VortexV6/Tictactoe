@@ -197,12 +197,12 @@ public void comenzar_a_jugar_auto(){
             }
             if(juego.equals("X") || (juego.equals("0"))){
             
-            System.out.println("Comienza el 0");
+            System.out.println("Comienza el X");
             
             System.out.println("");
             
             while(fin==false){
-            dibuja_tres_en_raya();
+            
             if(valor_juego==1){
                 System.out.println("Te toca X");
                 System.out.println("Introduce coordenadas de posición: (0,0) ");
@@ -246,7 +246,7 @@ public void comenzar_a_jugar_auto(){
                 System.out.println("No puede jugar, ya está usado");
             }
             }
-            if(valor_juego==0){
+            else if(valor_juego==0){
                 System.out.println("Te toca 0");
                 int numeroAleatorio = (int) (Math.random()*2+0);
             
