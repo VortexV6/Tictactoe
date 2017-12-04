@@ -196,9 +196,7 @@ public void comenzar_a_jugar_auto(){
                 
             }
             if(juego.equals("X") || (juego.equals("0"))){
-            
-            System.out.println("Comienza el X");
-            
+                        
             System.out.println("");
             
             while(fin==false){
