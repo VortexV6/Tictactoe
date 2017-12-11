@@ -130,7 +130,7 @@ public class Tictactoe {
             String introduceX;
             boolean fin = false;
 
-            System.out.println("¿Cómo quieres jugar X/0?");
+            System.out.println("¿Jugador 1 cómo quieres jugar X/0?");
             String juego = teclado.readLine().toUpperCase();
             int valor_juego = 0;
             if (juego.equals("0")) {
@@ -143,9 +143,7 @@ public class Tictactoe {
             }
             if (juego.equals("X") || (juego.equals("0"))) {
 
-                System.out.println("Comienza el 0");
-
-                System.out.println("");
+               
 
                 while (fin == false) {
                     dibuja_tres_en_raya();
