@@ -26,11 +26,11 @@ public class Tictactoe {
 
     public static void main(String[] args) throws IOException {
         // TODO code application logic here
-
-        Tictactoe mi_juego = new Tictactoe();
+        System.out.println("Bienvenido a Tictactoe de Axel & Mario");
+        Tictactoe nuestro_juego = new Tictactoe();
 
         char opcion = '1';
-
+        
         System.out.println("1- Automático");
         System.out.println("2- Modo manual");
         opcion = teclado.readLine().charAt(0);
@@ -39,16 +39,16 @@ public class Tictactoe {
             System.out.println("Vas a empezar la " + jugados + " partida");
             switch (opcion) {
                 case '1':
-                    mi_juego.inicializa();
-                    mi_juego.dibuja_tres_en_raya();
-                    mi_juego.comenzar_a_jugar_auto();
+                    nuestro_juego.inicializa();
+                    nuestro_juego.dibuja_tres_en_raya();
+                    nuestro_juego.comenzar_a_jugar_auto();
                     jugados = jugados + 1;
                     break;
 
                 case '2':
-                    mi_juego.inicializa();
-                    mi_juego.dibuja_tres_en_raya();
-                    mi_juego.comenzar_a_jugar();
+                    nuestro_juego.inicializa();
+                    nuestro_juego.dibuja_tres_en_raya();
+                    nuestro_juego.comenzar_a_jugar();
                     jugados = jugados + 1;
                     break;
 
@@ -156,7 +156,7 @@ public class Tictactoe {
                         System.out.println("Te toca 0");
 
                     }
-                    System.out.println("Introduce coordenadas de posición: (0,0) ");
+                    System.out.println("Introduce coordenadas de posición solicitada ");
                     System.out.println("Introduce la fila");
                     int fila = Integer.parseInt(teclado.readLine()) - 1;
                     System.out.println("Introduce la columna");
