@@ -133,9 +133,9 @@ public class Tictactoe {
             String introduceX;
             String nombre1, nombre2;
             boolean fin = false;
-            System.out.println("Cual es el nombre del jugador 1?");
+            System.out.println("Cual es el nombre del jugador 1 ?");
             nombre1 = teclado.readLine().toUpperCase();
-            System.out.println("Cual es el nombre del jugador 2?");
+            System.out.println("Cual es el nombre del jugador 2 ?");
             nombre2 = teclado.readLine().toUpperCase();
             System.out.println("¿ "+ nombre1 +" cómo quieres jugar X/0?");
             String juego = teclado.readLine().toUpperCase();
