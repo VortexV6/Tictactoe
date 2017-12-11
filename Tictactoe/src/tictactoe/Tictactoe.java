@@ -183,9 +183,9 @@ public class Tictactoe {
 
                     }
                     System.out.println("Introduce coordenadas de posición solicitada ");
-                    System.out.println("Introduce la fila");
+                    System.out.println("Introduce la fila seleccionada");
                     int fila = Integer.parseInt(teclado.readLine()) - 1;
-                    System.out.println("Introduce la columna");
+                    System.out.println("Introduce la columna seleccionada");
                     int columna = Integer.parseInt(teclado.readLine()) - 1;
                     if (tablero[fila][columna] == 3) {
                         boolean ganador;
@@ -256,9 +256,9 @@ public class Tictactoe {
                     if (valor_juego == 1) {
                         System.out.println("Te toca X");
                         System.out.println("Introduce coordenadas de posición: (0,0) ");
-                        System.out.println("Introduce la fila");
+                        System.out.println("Introduce la fila seleccionada");
                         int fila = Integer.parseInt(teclado.readLine()) - 1;
-                        System.out.println("Introduce la columna");
+                        System.out.println("Introduce la columna seleccionada");
                         int columna = Integer.parseInt(teclado.readLine()) - 1;
                         if (tablero[fila][columna] == 3) {
                             boolean ganador;
