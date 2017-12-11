@@ -8,8 +8,10 @@ package tictactoe;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 
 /**
  *
@@ -124,6 +126,7 @@ public class Tictactoe {
     }
 
     public void comenzar_a_jugar() {
+        ArrayList<jugador> jugador_list = new ArrayList<jugador>();
         try {
             BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));
             String introduce0;
@@ -135,10 +138,20 @@ public class Tictactoe {
             int valor_juego = 0;
             if (juego.equals("0")) {
                 valor_juego = 0;
+                
+                jugador jugador1 = new jugador(valor_juego);
+                jugador jugador2 = new jugador(valor_juego + 1);
+                jugador_list.add(jugador1);
+                jugador_list.add(jugador2);
+                
             }
             if (juego.equals("X")) {
 
                 valor_juego = 1;
+                jugador jugador1 = new jugador(valor_juego);
+                jugador jugador2 = new jugador(valor_juego - 1);
+                jugador_list.add(jugador1);
+                jugador_list.add(jugador2);
 
             }
             if (juego.equals("X") || (juego.equals("0"))) {
@@ -149,9 +162,20 @@ public class Tictactoe {
                     dibuja_tres_en_raya();
                     if (valor_juego == 1) {
                         System.out.println("Te toca X");
+                        if (jugador_list.get(0).getValor() == 1) {
+                            System.out.println("te toca " + jugador_list.get(0).getName());
+                        }else{
+                            System.out.println("te toca " + jugador_list.get(1).getName());
+                        }
+                        
                     }
                     if (valor_juego == 0) {
                         System.out.println("Te toca 0");
+                        if (jugador_list.get(0).getValor() == 0) {
+                            System.out.println("te toca " + jugador_list.get(0).getName());
+                        }else{
+                            System.out.println("te toca " + jugador_list.get(1).getName());
+                        }
 
                     }
                     System.out.println("Introduce coordenadas de posición solicitada ");
