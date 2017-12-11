@@ -77,7 +77,7 @@ public class Tictactoe {
                 }
                 if (tablero[i][j]==3)
                 {
-                     System.out.print("|" + "  ");
+                     System.out.print("| " + "  ");
                     
                 }
             }
