@@ -7,7 +7,7 @@ package tictactoe;
 
 /**
  *
- * @author Axel y mario
+ * @author Axel y Mario
  */
 public class jugador {
     public int valor;
@@ -16,12 +16,12 @@ public class jugador {
     public jugador(int valor, String name) {
         this.valor = valor;
         this.name = name;
+        if (this.name.equals("")) {
+            this.name = "Jugador " + valor;
+        }
     }
 
-//    public jugador(int valor) {
-//        this.valor = valor;
-//        this.name = "Jugador " + valor;
-//    }
+    
 
     public int getValor() {
         return valor;
