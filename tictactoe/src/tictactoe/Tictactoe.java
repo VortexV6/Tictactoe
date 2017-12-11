@@ -132,9 +132,9 @@ public void comenzar_a_jugar(){
             }
            System.out.println("Introduce coordenadas de posición: (0,0) ");
             System.out.println("Introduce la fila");
-            int fila= Integer.parseInt(teclado.readLine());
+            int fila= Integer.parseInt(teclado.readLine())-1;
             System.out.println("Introduce la columna");
-            int columna= Integer.parseInt(teclado.readLine()); 
+            int columna= Integer.parseInt(teclado.readLine())-1; 
             if(tablero[fila][columna]==3){
                 boolean ganador;
                 tablero[fila][columna]=valor_juego;
@@ -205,9 +205,9 @@ public void comenzar_a_jugar_auto(){
                 System.out.println("Te toca X");
                 System.out.println("Introduce coordenadas de posición: (0,0) ");
             System.out.println("Introduce la fila");
-            int fila= Integer.parseInt(teclado.readLine());
+            int fila= Integer.parseInt(teclado.readLine())-1;
             System.out.println("Introduce la columna");
-            int columna= Integer.parseInt(teclado.readLine()); 
+            int columna= Integer.parseInt(teclado.readLine())-1; 
             if(tablero[fila][columna]==3){
                 boolean ganador;
                 tablero[fila][columna]=valor_juego;
