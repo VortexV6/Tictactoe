@@ -18,32 +18,44 @@ public class Tictactoe {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         // TODO code application logic here
 
         BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));
         Tictactoe mi_juego= new Tictactoe();
         String texto;
         char opcion='1';
-        
+        int jugados = 0;
+        System.out.println("1- Automático");
+        System.out.println("2- Modo manual");
+        opcion=teclado.readLine().charAt(0);
         
         while((opcion=='1') || (opcion=='2')){
             try {
-                 System.out.println("1- Automático");
-        System.out.println("2- Modo manual");
-                opcion=teclado.readLine().charAt(0);
-                
+                 
+                if (jugados> 1 ) {
+                    char quiere;
+                    System.out.println("Quieres jugar otra partida");
+                    System.out.println("1. Si");
+                    System.out.println("2. No");
+                    quiere =teclado.readLine().charAt(0);
+                    if (quiere == 2) {
+                        break;
+                    }
+                }
                 switch(opcion){
                     case '1':
                         mi_juego.inicializa();
                     mi_juego.dibuja_tres_en_raya();
                     mi_juego.comenzar_a_jugar_auto();
+                    jugados = jugados +1;
                         break;
                      
                     case '2':
                     mi_juego.inicializa();
                     mi_juego.dibuja_tres_en_raya();
                     mi_juego.comenzar_a_jugar();
+                    jugados = jugados +1;
                     break;
                         
                     default: 
@@ -213,9 +225,13 @@ public void comenzar_a_jugar_auto(){
                 tablero[fila][columna]=valor_juego;
                 dibuja_tres_en_raya();
                 ganador=comprobar_ganador(valor_juego);
-                
                 if(ganador){
-                    System.out.println("Ha ganado " + valor_juego);
+                    if (valor_juego == 1) {
+                        System.out.println("Has ganadoo!!!");
+                    }else{
+                        System.out.println("Has perdido , te ha ganado la maquina");
+                    }
+                
                     fin=true;
                     inicializa();
                 }else {
@@ -259,7 +275,12 @@ public void comenzar_a_jugar_auto(){
                 ganador=comprobar_ganador(valor_juego);
                 
                 if(ganador){
-                    System.out.println("Ha ganado " + valor_juego);
+                    if (valor_juego == 1) {
+                        System.out.println("Has ganadoo!!!");
+                    }else{
+                        System.out.println("Has perdido , te ha ganado la maquina");
+                    }
+                    
                     fin=true;
                     inicializa();
                 }else {
