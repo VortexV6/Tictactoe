@@ -7,7 +7,7 @@ package tictactoe;
 
 /**
  *
- * @author Jordi
+ * @author Axel y mario
  */
 public class jugador {
     public int valor;
@@ -18,10 +18,10 @@ public class jugador {
         this.name = name;
     }
 
-    public jugador(int valor) {
-        this.valor = valor;
-        this.name = "Jugador " + valor;
-    }
+//    public jugador(int valor) {
+//        this.valor = valor;
+//        this.name = "Jugador " + valor;
+//    }
 
     public int getValor() {
         return valor;

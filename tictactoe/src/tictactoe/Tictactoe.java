@@ -131,16 +131,20 @@ public class Tictactoe {
             BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));
             String introduce0;
             String introduceX;
+            String nombre1, nombre2;
             boolean fin = false;
-
+            System.out.println("Cual es el nombre del jugador 1?");
+            nombre1 = teclado.readLine().toUpperCase();
+            System.out.println("Cual es el nombre del jugador 2?");
+            nombre2 = teclado.readLine().toUpperCase();
             System.out.println("¿Jugador 1 cómo quieres jugar X/0?");
             String juego = teclado.readLine().toUpperCase();
             int valor_juego = 0;
             if (juego.equals("0")) {
                 valor_juego = 0;
                 
-                jugador jugador1 = new jugador(valor_juego);
-                jugador jugador2 = new jugador(valor_juego + 1);
+                jugador jugador1 = new jugador(valor_juego, nombre1);
+                jugador jugador2 = new jugador(valor_juego + 1, nombre2);
                 jugador_list.add(jugador1);
                 jugador_list.add(jugador2);
                 
@@ -148,8 +152,8 @@ public class Tictactoe {
             if (juego.equals("X")) {
 
                 valor_juego = 1;
-                jugador jugador1 = new jugador(valor_juego);
-                jugador jugador2 = new jugador(valor_juego - 1);
+                jugador jugador1 = new jugador(valor_juego, nombre1);
+                jugador jugador2 = new jugador(valor_juego - 1, nombre2);
                 jugador_list.add(jugador1);
                 jugador_list.add(jugador2);
 
