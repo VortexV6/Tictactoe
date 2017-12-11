@@ -343,7 +343,7 @@ public class Tictactoe {
                                 }
                             }
                         } else {
-                            System.out.println("No puede jugar, ya está usado");
+                            
                         }
 
                     }
